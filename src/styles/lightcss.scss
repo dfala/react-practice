@@ -1,3 +1,4 @@
+/*********************/
 /*** WWW SPECIFIC ***/
 * {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -299,7 +300,19 @@ pre {
   padding: 20px;
   font-family: monospace;
   letter-spacing: -1px;
+  line-height: 22px;
   word-wrap: break-word;
+}
+pre.override-pre {
+  background-color: inherit;
+  color: inherit;
+  padding: 0;
+  line-height: inherit;
+  letter-spacing: normal;
+  letter-spacing: 1px;
+}
+pre.override-pre .hljs-title {
+  color: #4C4C4C;
 }
 .l-form :first-child {
   margin-top: 0px;
@@ -317,19 +330,23 @@ pre {
   width: 100%;
   border-radius: 2px;
   border: 1px solid #9a9797;
+  min-height: 46px;
 }
 .l-input-mixin:focus {
   outline: none;
   border: 1px solid #008cba;
 }
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
   padding: 11px 17px;
   margin: 20px 0;
   width: 100%;
   border-radius: 2px;
   border: 1px solid #9a9797;
+  min-height: 46px;
 }
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   outline: none;
   border: 1px solid #008cba;
 }
@@ -339,6 +356,7 @@ textarea {
   width: 100%;
   border-radius: 2px;
   border: 1px solid #9a9797;
+  min-height: 46px;
   max-width: 100%;
 }
 textarea:focus {
@@ -351,6 +369,7 @@ select {
   width: 100%;
   border-radius: 2px;
   border: 1px solid #9a9797;
+  min-height: 46px;
   background-color: #fff;
   font-size: 1em;
   cursor: pointer;

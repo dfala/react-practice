@@ -5,9 +5,15 @@ $background-color: #EFEFFA;
 
 // Borders
 $dark-border: 1px solid $dark-gray;
+$radius-default: 2px;
 
 //Sizes
 $max-width: 900px;
 
 //Spacing
-$default-padding: 20px;
+$default-spacing: 20px;
+@mixin center-page() {
+  display: flex;
+  justify-content: middle;
+  align-items: center;
+}

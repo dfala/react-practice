@@ -7,6 +7,10 @@ html, body {
   width: 100%;
   min-height: 100%;
   // background-color: $background-color;
+
+  input[type=text], input[type=password] {
+    margin-top: 0;
+  }
 }
 
 $header-height: 70px;
@@ -15,10 +19,27 @@ $header-height: 70px;
   height: calc(100vh - #{$header-height});
   background-color: $background-color;
   overflow: auto;
+  @include center-page();
+}
+
+@mixin shared-props() {
+  padding: $default-spacing;
+  margin: $default-spacing auto;
 }
 
 .container {
   max-width: $max-width;
-  padding: $default-padding;
-  margin: 0 auto;
+  @include shared-props();
+}
+
+.login-form {
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: $radius-default;
+  border: $dark-border;
+  @include shared-props();
+
+  h2 {
+    margin-top: 0;
+  }
 }
