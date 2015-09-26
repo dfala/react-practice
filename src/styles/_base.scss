@@ -1,0 +1,25 @@
+// Settings go here
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+body {
+  background-color: #F0F0F0;
+}
+
+$header-height: 70px;
+
+// header {
+//   width: 100%;
+//   background-color: #fff;
+//   padding: 0 20px;
+//   border-bottom: $dark-border;
+//
+//   height: $header-height;
+//   line-height: $header-height;
+// }
+
+.banner {
+  width: 100%;
+  height: calc(100vh - #{$header-height});
+}
